@@ -1,0 +1,122 @@
+
+
+
+
+ion-title {
+    color: #4B0076;
+    font-family: "Lucida Handwriting";
+    text-align: center;
+
+}
+
+
+ion-content {
+    --background: white;
+    --color: #4B0076;
+    
+}
+
+.bottom {
+    color: #4B0076;
+    font-family: Montaga;
+    border-top: #4B0076;
+    border-width: 5px;
+
+}
+
+a:hover { 
+    color: #DBC6E8
+}
+
+ion-header {
+    --background: white;
+    --color: #4B0076;
+    --border-bottom: #4B0076;
+    --border-width: 3px;
+}
+
+
+h2 {
+    color: #4B0076;
+    text-align: center;
+    font-family: Montaga;
+}
+
+ion-button {
+    --background: #DBC6E8;
+    --color: #4B0076;
+    --font-family: Montaga;
+    --border-radius: 8px;
+    --border-color: #4B0076;
+    --border-width: 3px;
+    --box-shadow: 0 2px 3px 0 #4B0076;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+
+ion-checkbox {
+    --checkbox-background-checked: #4B0076;
+  } 
+
+  ion-checkbox::part(container) {
+    border-radius: 4px;
+    border: 2px solid #4B0076;
+  }
+
+ion-toggle {
+    --track-background-checked:#DBC6E8;
+    --handle-background-checked: #4B0076; 
+
+  }
+
+
+ion-menu-button {
+    color: #4B0076;
+    
+} 
+
+.custom-label {
+    color: #4B0076;
+
+}
+
+.custom-label:hover {
+    color: #DBC6E8;
+}
+
+
+ion-card {
+    background: white;
+}
+
+ion-icon {
+    color: #4B0076;
+}
+
+ion-item {
+    color: #4B0076;
+}
+
+ion-input {
+    color: #4B0076;
+    stroke: #4B0076;
+}
+
+
+
+p {
+    color: black;
+    text-align: center;
+}
+
+div {
+    border: none;
+    
+}
+
+ion-fab-button {
+    --background: #DBC6E8;
+    --background-activated: #DBC6E8;
+    --background-hover: white;
+    --color: #4B0076;
+  }
