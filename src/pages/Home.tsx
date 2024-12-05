@@ -29,6 +29,7 @@ const Home: React.FC = () => {
               <IonCard>
                 <IonCardContent>
                   <IonButton routerLink="/login" expand="full">Login</IonButton>
+                  <br />
                   <IonButton routerLink="/register" expand="full">Sign Up</IonButton>
                 </IonCardContent>
               </IonCard>

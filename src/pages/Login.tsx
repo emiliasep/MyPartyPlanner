@@ -1,12 +1,26 @@
 import { IonButton, IonCard, IonCardContent, IonCol, IonContent, IonGrid, IonHeader, IonInput, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png';
+import { loginUser } from '../firebaseConfig';
+import { useHistory } from 'react-router';
 
 
 
 
 const Login: React.FC = () => {
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+    const history = useHistory();
+
+    async function login() {
+        const res = await loginUser(username, password);
+        if(!res) {
+          alert('Error logging in with your credentials')
+        } else {
+          history.push('/tabs/welcome');
+        }
+    }
 
     return (
         <IonPage>
@@ -32,10 +46,13 @@ const Login: React.FC = () => {
                             <IonCard>
                                 <IonCardContent>
                                     <form>
-                                        <IonInput fill="outline" label="Email" type="email" labelPlacement="floating"></IonInput>
-                                        <IonInput className="ion-margin-top" fill="outline" label="Password" type="password" labelPlacement="floating"></IonInput>
+                                        <IonInput fill="outline" label="Username" labelPlacement="floating" 
+                                        onIonChange={(e: any) => setUsername(e.detail.value)}/>
+                                        <IonInput className="ion-margin-top" fill="outline" label="Password" type="password" 
+                                        labelPlacement="floating" onIonChange={(e: any) => setPassword(e.detail.value)}/>
                                     </form>
-                                    <IonButton routerLink="/tabs/welcome" className="ion-margin-top" expand="full">Log In</IonButton>
+                                    <IonButton className="ion-margin-top" expand="full" onClick={login}>Log In</IonButton>
+                                    <br />
                                     <p>Don't have an Account?</p>
                                     <IonButton routerLink="/register" className="ion-margin-top" expand="full">Sign Up</IonButton>
                                 </IonCardContent>
